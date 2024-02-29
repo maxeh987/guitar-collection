@@ -1,0 +1,179 @@
+body {
+    font-family: avenir, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    height: 3.5rem;
+    width: 100%;
+    background-color: darkgrey;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+.navbut {
+    height: 3.5rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: Avenir, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbut:hover {
+    background-color: grey;
+}
+
+.navbut:active {
+    background-color: dimgrey;
+    padding: 0.75rem;
+    margin: 0.25rem;
+    height: 3rem;
+}
+
+.break {
+    width: 0;
+    height: 80%;
+    border: 0.05rem solid grey;
+    margin: auto 0;
+}
+
+.title {
+    margin: 3.5rem 0 0 0;
+    width: calc(100vw - scrollbar-width);
+    height: calc(100vw/10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+.else {
+    margin: 0;
+    width: calc(100vw - scrollbar-width);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+.Tseries {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.eachitem {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.images {
+    width: 30%;
+}
+
+.image {
+    width: 100%;
+}
+
+.rinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+}
+
+.mobilerange {
+    display: none;
+
+}
+
+.range {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: calc(0.05*100vw) 0;
+}
+
+.info {
+    text-align: center;
+    margin: 2rem 0 0 0;
+    font-size: calc(25px + (100vw - 1440px)/52);
+}
+
+hr {
+    color: dimgrey;
+    width: 90%;
+    height: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .mobilerange {
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: white;
+        margin: calc(0.05*100vw) 0;
+    }
+    .range {
+        display: none;
+    }
+    .eachitem {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    .rinfo {
+        width: 90%;
+    }
+    .info {
+        font-size: 1rem;
+        margin: 3rem 0 0 0;
+    }
+    .images {
+        width: 90%;
+        height: calc(90vw*0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .image {
+        transform: rotate(90deg);
+        max-width:35%;
+        z-index: 0;
+    }
+    .Tseries {
+        margin: 2rem 1rem;
+    }
+}
